@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Mafia"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".voting.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
