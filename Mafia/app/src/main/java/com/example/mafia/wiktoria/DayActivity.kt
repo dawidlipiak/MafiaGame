@@ -24,26 +24,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mafia.R
-import com.example.mafia.ui.theme.MafiaTheme
 
 class MainActivityDay : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MafiaTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    DayActivity()
-                }
+                
+               DayActivity()
+             
             }
         }
     }
 }
 @Composable
-//playersList : ArrayList<Player> -trzeba przekazywać funkcji
+//playersList : ArrayList<Player> -trzeba przekazywać funkcji tam
+//              |
+//              V  
 fun DayActivity() {
     val imageModifier = Modifier
         .border(BorderStroke(1.dp,Color.Black))
@@ -73,14 +70,11 @@ fun DayActivity() {
 
     }
 
-
-
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MafiaTheme {
         DayActivity()
-    }
+    
 }
