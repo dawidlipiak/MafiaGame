@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Mafia</string>
+    <string name="app_name">mafiaTest</string>
+    <string name="title_activity_role_screen">RoleScreen</string>
+
+    <string name="your_role">Twoja rola to:</string>
+    <string name="how_to_play">JAK GRAĆ:</string>
+
+    <string name="mafia">MAFIA</string>
+    <string name="detective">DETEKTYW</string>
+    <string name="civil">MIESZKANIEC</string>
+    <string name="medic">MEDYK</string>
+
+    <string name="mafia_desc">Wyjdź nocą na ulicę aby wyrównać rachunki. Wybierz osobę, która spać będzie z rybkami. Wygrasz, gdy pozbędziesz się detektywów a ludność nie będzie już w stanie was wygłosować</string>
+    <string name="detective_desc">W twoim mieście musi znów zapanować sprawiedliwość. W nocnym dochodzeniu wskaż winnego i umieść go w więzieniu. Wygrywasz, gdy miasto będzie wolne od mafii</string>
+    <string name="civil_desc">Strzeż się mafi! Razem z innymi mieszkańcami miasta za dnia głosuj, kto waszym zdaniem jest mafią. Wygrywaszm gdy miast będzie wolne od mafii</string>
+    <string name="medic_desc">Chcesz pomagać ludziom, jednak nie możesz być wszędzie jednocześnie. Wybierz jedną osobę w nocy, do której się udasz. Ochronisz ją, jeżeli miałoby stać się jej coś złego. Wygyrwasz, gdy miasto będzie wolne od mafii</string>
+
+    <string name="join_lobby">Dołącz do lobby z PIN\'em gry:</string>
 </resources>

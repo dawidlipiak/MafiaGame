@@ -1,10 +1,7 @@
 package com.example.mafia.voting.view.components
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -23,7 +20,6 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.MutableLiveData
 import com.example.mafia.R
 
 @Composable
@@ -37,7 +33,7 @@ fun ReadyButton(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         var backGroundColor: Int by remember {
-            mutableStateOf(R.color.pink)
+            mutableStateOf(R.color.lightBlue)
         }
 
         Button(
@@ -58,7 +54,7 @@ fun ReadyButton(
 
             ) {
             backGroundColor = if (votable) {
-                R.color.pink
+                R.color.lightBlue
             } else {
                 R.color.lightGray
             }

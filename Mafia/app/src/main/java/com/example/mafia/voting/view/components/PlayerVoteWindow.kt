@@ -32,6 +32,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mafia.Player
 import com.example.mafia.R
+import com.example.mafia.ui.theme.MafiaBackgroundColor
+import com.example.mafia.ui.theme.MafiaThemeColor
 
 @Composable
 fun playerVoteWindow(
@@ -40,7 +42,7 @@ fun playerVoteWindow(
     modifier: Modifier = Modifier,
     handleVoting: () -> Unit,
 ) {
-    LazyColumn(modifier.border(3.dp, MaterialTheme.colorScheme.primary)) {
+    LazyColumn(modifier.border(3.dp, colorResource(id = R.color.black))) {
         items(players) {player ->
             var voteCounter : Int by remember {
                 mutableStateOf(player.voteCounter)
@@ -72,7 +74,7 @@ fun playerVoteWindow(
                             contentPadding = PaddingValues(11.dp,3.dp),
                             shape = RoundedCornerShape(25.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = colorResource(id = R.color.pink),
+                                containerColor = colorResource(id = R.color.lightBlue),
                                 contentColor = colorResource(id = R.color.white),
                             )
                         ) {
@@ -89,7 +91,7 @@ fun playerVoteWindow(
                     Text(
                         text = voteCounter.toString(),
                         fontSize = 35.sp,
-                        color = MaterialTheme.colorScheme.primary,
+                        color = Color.Black,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier
                             .padding(horizontal = 15.dp)

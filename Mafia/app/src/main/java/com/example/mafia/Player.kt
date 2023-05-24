@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,10 +45,10 @@ class Player (val nickname: String, val role: Role, var roleVisiability: Boolean
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .border(1.5.dp, MaterialTheme.colorScheme.primary, CircleShape)
+                    .border(1.5.dp, colorResource(id = R.color.lightBlue), CircleShape)
             )
 
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(15.dp))
 
             Column {
                 Text(
