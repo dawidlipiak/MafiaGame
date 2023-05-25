@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.magnifier
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
@@ -35,6 +36,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -43,9 +45,9 @@ import androidx.compose.ui.unit.sp
 import com.example.mafia.ui.theme.MafiaThemeColor
 import com.example.mafia.voting.ui.utils.Utility
 
-@Preview
+
 @Composable
-fun JoinGame() {
+fun JoinGame(JoinButtonClicked: () -> Unit) {
     var text: TextFieldValue by remember { mutableStateOf(TextFieldValue("")) }
 
     Column(
@@ -77,6 +79,7 @@ fun JoinGame() {
                 fontFamily = FontFamily(Font(R.font.poppins_regular)),
                 fontSize = 25.sp,
                 textAlign = TextAlign.Center) },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
 
             onValueChange = {
                 text = it
@@ -97,6 +100,7 @@ fun JoinGame() {
         ){
             Button(
                 onClick = {
+                          JoinButtonClicked()
                 },
                 modifier = Modifier
                     .height(60.dp)

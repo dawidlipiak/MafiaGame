@@ -1,4 +1,4 @@
-package com.example.mafia.lobby
+package com.example.mafia
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
