@@ -1,5 +1,6 @@
-package com.example.mafia.lobby
+package com.example.mafia
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,6 +17,10 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
@@ -29,9 +34,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.mafia.Player
 import com.example.mafia.R
+import com.example.mafia.ui.theme.MafiaThemeColor
 import com.example.mafia.voting.ui.utils.Utility
 
+@SuppressLint("MutableCollectionMutableState")
 @Composable
 fun LobbyScreen(
     startAction: () -> Unit
@@ -44,7 +52,7 @@ fun LobbyScreen(
         horizontalAlignment = CenterHorizontally
     ) {
         Text(
-            text = stringResource(id = R.string.join_lobby),
+            text = stringResource(id = R.string.lobbyPIN_info),
             textAlign = TextAlign.Center,
             style = TextStyle(
                 fontFamily = FontFamily(Font(R.font.poppins_semibold, FontWeight.Bold)),
@@ -77,14 +85,14 @@ fun LobbyScreen(
                         textAlign = TextAlign.Center,
                         fontSize = 40.sp,
                         fontWeight = FontWeight.Bold,
-                        color = colorResource(id = R.color.lightBlue),
+                        color = MafiaThemeColor,
                     )
                     Text(
                         text = "Graczy",
                         textAlign = TextAlign.Center,
                         fontSize = 25.sp,
                         fontWeight = FontWeight.Bold,
-                        color = colorResource(id = R.color.lightBlue),
+                        color = MafiaThemeColor,
                     )
                 }
             }
@@ -100,7 +108,7 @@ fun LobbyScreen(
                     .align(Alignment.CenterVertically),
                 shape = RoundedCornerShape(25.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.lightBlue),
+                    containerColor = MafiaThemeColor,
                     contentColor = colorResource(id = R.color.white),
                 )
             ) {
@@ -115,8 +123,11 @@ fun LobbyScreen(
 
         Spacer(modifier = Modifier.height(20.dp))
 
+        var playerList: ArrayList<Player> by remember {
+            mutableStateOf(Utility.playerList)
+        }
         LazyColumn(modifier = Modifier){
-            items(Utility.playerList){ player ->
+            items(playerList){ player ->
                 player.showPlayer()
                 Divider()
             }

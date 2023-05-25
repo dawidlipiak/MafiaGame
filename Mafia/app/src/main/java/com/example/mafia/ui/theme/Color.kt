@@ -14,5 +14,5 @@ val CivilThemeColor = Color(0xF3FFB900)
 
 val MafiaBackgroundColor = Color(0xF0FFD8CF)
 val DoctorBackgroundColor = Color(0xFFE4FFD3)
-val DetectiveBackgroundColor = Color(0xF2EBE1FF)
+val DetectiveBackgroundColor = Color(0xF2E0E0E0)
 val CivilBackgroundColor = Color(0xF3FFEAD3)

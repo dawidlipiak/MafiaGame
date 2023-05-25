@@ -1,4 +1,4 @@
-package com.example.mafia
+package com.example.mafia.wiktoria
 
 
 import android.os.Build.VERSION.SDK_INT
@@ -27,6 +27,9 @@ import coil.compose.rememberAsyncImagePainter
 import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
 import coil.request.ImageRequest
+import com.example.mafia.Player
+import com.example.mafia.R
+import com.example.mafia.Role
 
 
 @Composable
