@@ -15,5 +15,6 @@
     <string name="civil_desc">Strzeż się mafi! Razem z innymi mieszkańcami miasta za dnia głosuj, kto waszym zdaniem jest mafią. Wygrywaszm gdy miast będzie wolne od mafii</string>
     <string name="medic_desc">Chcesz pomagać ludziom, jednak nie możesz być wszędzie jednocześnie. Wybierz jedną osobę w nocy, do której się udasz. Ochronisz ją, jeżeli miałoby stać się jej coś złego. Wygyrwasz, gdy miasto będzie wolne od mafii</string>
 
-    <string name="join_lobby">Dołącz do lobby z PIN\'em gry:</string>
+    <string name="lobbyPIN_info">Dołącz do lobby z PIN\'em gry:</string>
+    <string name="lobby_join">Wpisz PIN aby dołączyć do gry</string>
 </resources>

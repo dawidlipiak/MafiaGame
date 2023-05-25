@@ -22,6 +22,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.mafia.ui.theme.MafiaThemeColor
 
 class Player (val nickname: String, val role: Role, var roleVisiability: Boolean = false) {
     var voteCounter : Int = 0
@@ -45,7 +46,7 @@ class Player (val nickname: String, val role: Role, var roleVisiability: Boolean
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .border(1.5.dp, colorResource(id = R.color.lightBlue), CircleShape)
+                    .border(1.5.dp, MafiaThemeColor, CircleShape)
             )
 
             Spacer(modifier = Modifier.width(15.dp))
