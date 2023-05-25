@@ -20,5 +20,8 @@ fun Navigation(context: Context, viewModel: VariableViewModel)
         composable(route = Screen.Role.route) {
             RoleScreen(navController = navController, context, viewModel)
         }
+        composable(route = Screen.Entry.route) {
+            EntryScreen(navController = navController)
+        }
     }
 }

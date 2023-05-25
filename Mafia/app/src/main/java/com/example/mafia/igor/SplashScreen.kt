@@ -33,7 +33,7 @@ fun SplashScreen(navController: NavHostController)
         startAnimation = true
         delay(4000)
         navController.popBackStack()
-        navController.navigate(Screen.Loading.route)
+        navController.navigate(Screen.Entry.route)
     }
 
     Splash(alpha = alphaAnimation.value)
